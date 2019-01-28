@@ -31,3 +31,6 @@ I've included some rudimentary unit tests.
 ```
 python3 test.py
 ```
+## Contact
+
+Please contact jacobfionngoldberg@gmail.com if there are any issues
