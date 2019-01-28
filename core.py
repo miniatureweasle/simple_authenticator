@@ -1,26 +1,45 @@
+"""
+Defines a REST-based interfaces without
+using a full-fledged web programming framework.
+
+SimpleWSGIApp registers all WSGI based handlers (our views)
+and their URLS on instantiation. SimpleWSGIApp can then
+be passed to a server installation to handle incoming HTTP requests
+
+"""
+
 import cgi
 
+import const
 import urls
 from database import db_ops
 
 
 def notfound_404(environ, start_response):
-    start_response('404 Not Found', [('Content-type', 'text/plain')])
+    """No page here"""
+    start_response(const.NOT_FOUND, const.TEXT_HEADERS)
     return [b'Not Found']
 
 
 class SimpleWSGIApp:
     """
-    Registers and maps URLS to Views.
+    Registers all urlpatterns found in urls.py
+
+    When a request arrives, the method and path are extracted and
+    used to dispatch to a view.
     """
     def __init__(self):
         self.pathmap = {}
-        for method, pattern, view in urls.urlpatterns:
-            self.register(method, pattern, view)
-        # for easy of use let ensure the DB is setup here
+        for method, pattern, view_func in urls.urlpatterns:
+            self.register(method, pattern, view_func)
+        # for easy of use lets ensure the DB is setup here
         db_ops.setup()
 
     def __call__(self, environ, start_response):
+        """
+        Before any view is called transform post
+        parameters into a dictionary for ease of use
+        """
         path = environ['PATH_INFO']
         params = cgi.FieldStorage(
             environ['wsgi.input'],
@@ -28,9 +47,10 @@ class SimpleWSGIApp:
         )
         method = environ['REQUEST_METHOD'].lower()
         environ['params'] = {key: params.getvalue(key) for key in params}
-        handler = self.pathmap.get((method, path), notfound_404)
-        return handler(environ, start_response)
+        view = self.pathmap.get((method, path), notfound_404)
+        return view(environ, start_response)
 
     def register(self, method, path, function):
+        """Maps methods and URLS to views"""
         self.pathmap[method.lower(), path] = function
         return function

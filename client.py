@@ -7,17 +7,17 @@ import tools
 from runserver import SimpleHTTPSServer
 
 
-def login(email, password, server_port):
+def login(user_email, user_password, server_port):
     """Logs in a user"""
-    payload = {'email': email, 'password': password}
+    payload = {'email': user_email, 'password': user_password}
     url = 'https://localhost:{}/login'.format(server_port)
     response = requests.post(url, data=payload, verify='./ssl/self-signed.crt')
     print(str(response.content))
 
 
-def signup(email, password, server_port):
+def signup(user_email, user_password, server_port):
     """Signs up a user"""
-    payload = {'email': email, 'password': password}
+    payload = {'email': user_email, 'password': user_password}
     url = 'https://localhost:{}/signup'.format(server_port)
     response = requests.post(url, data=payload, verify='./ssl/self-signed.crt')
     response_content = str(response.content)
@@ -28,27 +28,30 @@ def signup(email, password, server_port):
         tools.wait_for_sigint()
 
 
-def verify(token, server_port):
+def verify(email_verification_token, server_port):
     """Verifies a user"""
-    url = 'https://localhost:{}/verify?token={}'.format(server_port, token)
+    url = 'https://localhost:{}/verify?token={}'.format(server_port, email_verification_token)
     # ensure our self-signed certificate is trusted
     response = requests.get(url, verify='./ssl/self-signed.crt')
     print(response.content)
 
 
 def prompt_cred() -> tuple:
-    email = input('Enter email:\n')
-    password = input('Enter password:\n')
-    return email, password
+    user_email = input('Enter email:\n')
+    user_password = input('Enter password:\n')
+    return user_email, user_password
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('endpoint')
+    parser.add_argument(
+        'endpoint',
+        choices=['signup', 'login', 'verify'],
+        help='signup, verify, login'
+    )
     args = parser.parse_args()
 
     print(const.APP_NAME)
-
     server = SimpleHTTPSServer()
 
     if args.endpoint == 'signup':

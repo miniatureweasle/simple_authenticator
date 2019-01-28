@@ -4,6 +4,12 @@ Defines a simple HTTPS Server with:
     2. SSL enabled
     3. a self-signed certificate generated with OpenSSL
     4. a daemon thread allowing instantiation within the codebase
+
+Usage:
+
+def post_to_server(server: SimpleHTTPSServer) -> requests.Response:
+    return requests.post(url=f"http://localhost:{server.port}")
+
 """
 
 import datetime
@@ -14,7 +20,6 @@ from wsgiref.simple_server import make_server
 import const
 import tools
 from core import SimpleWSGIApp
-
 
 
 class SimpleHTTPSServer(object):

@@ -25,6 +25,7 @@ BAD_REQUEST_400 = '400 Bad Request'
 UNAUTHORIZED_401 = '401 Unauthorized'
 FORBIDDEN_403 = '403 Forbidden'
 CONFLICT_409 = '409 Conflict'
+NOT_FOUND = '404 Not Found'
 INTERNAL_SERVER_ERROR_500 = '500 Internal Server Error'
 JSON_HEADERS = [('Content-type', 'application/json')]
 TEXT_HEADERS = [('Content-type', 'text/html')]
