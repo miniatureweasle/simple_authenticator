@@ -52,7 +52,7 @@ def signup(environ, start_response) -> bytearray:
                 start_response(const.CREATED_201, const.JSON_HEADERS)
                 yield const.SUCCESS
             else:
-                # likely database insert failed, check logs
+                # likely database insert failed, check logs (when they exist)
                 start_response(const.INTERNAL_SERVER_ERROR_500, const.JSON_HEADERS)
                 yield const.INTERNAL_SERVER_ERROR
         else:

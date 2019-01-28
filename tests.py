@@ -1,10 +1,9 @@
 """
-Some unit tests for the API.
-Future tasks could include
+Some unit tests for the API. Future tasks could include:
 
 1. more extensive validation testing
-2.
-3.
+2. dry-run email testing
+3. testing various user actions
 
 """
 import unittest
@@ -58,7 +57,7 @@ class TestAPI(unittest.TestCase):
         url = 'https://localhost:{}/verify?token=1234'.format(TestAPI.server.port)
         # ensure our self-signed certificate is trusted
         response = requests.get(url, verify='./ssl/self-signed.crt')
-
+        self.assertTrue(const.NO_USER_WITH_THAT_TOKEN in response.content)
 
 if __name__ == '__main__':
     unittest.main()
