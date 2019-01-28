@@ -48,7 +48,7 @@ class TestAPI(unittest.TestCase):
         self.assertTrue(password_validation_error not in response.json()['Errors'])
 
     def test_invalid_email(self):
-        """Tests trying to create a user with an invalid email failed with the correctly"""
+        """Tests trying to create a user with an invalid email fails with the correctly"""
         payload = {'email': 123}
         url = 'https://localhost:{}/signup'.format(TestAPI.server.port)
         # ensure our self-signed certificate is trusted
@@ -58,7 +58,7 @@ class TestAPI(unittest.TestCase):
         self.assertTrue(email_validation_error in response.json()['Errors'])
 
     def test_invalid_token(self):
-        """Tests trying to active an invalid token failes with the correct response"""
+        """Tests trying to active an invalid token fails with the correct response"""
         url = 'https://localhost:{}/verify?token=1234'.format(TestAPI.server.port)
         # ensure our self-signed certificate is trusted
         response = requests.get(url, verify='./ssl/self-signed.crt')
