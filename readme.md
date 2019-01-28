@@ -1,6 +1,6 @@
 # Plug & Play Authenticator
 
-A simple user authentication system built with solely with Python 3.
+A simple user authentication system built with Python 3's Standard Library.
 
 ## Getting Started
 
