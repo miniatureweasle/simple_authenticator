@@ -9,13 +9,14 @@ be passed to a server installation to handle incoming HTTP requests
 """
 
 import cgi
+from typing import List, Callable, Any
 
 import const
 import urls
 from database import db_ops
 
 
-def notfound_404(environ, start_response):
+def notfound_404(environ: dict, start_response: Callable[..., Any]):
     """No page here"""
     start_response(const.NOT_FOUND, const.TEXT_HEADERS)
     return [b'Not Found']
@@ -35,7 +36,7 @@ class SimpleWSGIApp:
         # for easy of use lets ensure the DB is setup here
         db_ops.setup()
 
-    def __call__(self, environ, start_response):
+    def __call__(self, environ: dict, start_response: Callable[..., Any]) -> List[bytes]:
         """
         Before any view is called transform post
         parameters into a dictionary for ease of use
@@ -50,7 +51,7 @@ class SimpleWSGIApp:
         view = self.pathmap.get((method, path), notfound_404)
         return view(environ, start_response)
 
-    def register(self, method, path, function):
+    def register(self, method: str, path: str, view_func: Callable[..., Any]) -> Callable[..., Any]:
         """Maps methods and URLS to views"""
-        self.pathmap[method.lower(), path] = function
-        return function
+        self.pathmap[method.lower(), path] = view_func
+        return view_func

@@ -22,7 +22,7 @@ import tools
 from core import SimpleWSGIApp
 
 
-class SimpleHTTPSServer(object):
+class SimpleHTTPSServer:
 
     def __init__(self):
         """

@@ -1,6 +1,12 @@
+"""
+Defines the views used within the app
+
+"""
+
 import json
 import re
 import secrets
+from typing import List, Callable, Any
 from urllib.parse import parse_qs
 
 import const
@@ -26,7 +32,7 @@ def validate(fields: dict) -> dict:
     return fields
 
 
-def signup(environ, start_response) -> bytearray:
+def signup(environ: dict, start_response: Callable[..., Any]) -> List[bytes]:
     """Signs up a user"""
     validated_data = validate(environ['params'])
     if 'Errors' not in validated_data:
@@ -64,7 +70,7 @@ def signup(environ, start_response) -> bytearray:
         yield validation_errors
 
 
-def verify(environ, start_response) -> bytearray:
+def verify(environ: dict, start_response: Callable[..., Any]) -> List[bytes]:
     """Verifies a users email address"""
     token = parse_qs(environ['QUERY_STRING']).get('token', [''])[0]
     # lets avoid script injection by escaping user input
@@ -78,7 +84,7 @@ def verify(environ, start_response) -> bytearray:
         yield const.NO_USER_WITH_THAT_TOKEN
 
 
-def login(environ, start_response) -> bytearray:
+def login(environ: dict, start_response: Callable[..., Any]) -> List[bytes]:
     """Logs in a user"""
     validated_data = validate(environ['params'])
     if 'Errors' not in validated_data:

@@ -14,7 +14,7 @@ setup() <- this will run with default DB_FILE defined in const.py
 """
 
 import sqlite3
-from typing import Optional
+from typing import Optional, Callable, Any
 
 import const
 
@@ -32,7 +32,7 @@ def connect(db_file) -> Optional[sqlite3.Connection]:
     return None
 
 
-def connection_handler(db_ops_func):
+def connection_handler(db_ops_func: Callable[..., Any]) -> Callable[..., Any]:
     """Handles opening and closing connections to the DB"""
     def wrapper_connection_handler(*args, **kwargs):
         conn = connect(const.DB_FILE)

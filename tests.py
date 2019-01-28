@@ -64,5 +64,6 @@ class TestAPI(unittest.TestCase):
         response = requests.get(url, verify='./ssl/self-signed.crt')
         self.assertTrue(const.NO_USER_WITH_THAT_TOKEN in response.content)
 
+
 if __name__ == '__main__':
     unittest.main()
