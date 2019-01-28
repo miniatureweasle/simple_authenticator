@@ -48,7 +48,7 @@ class TestAPI(unittest.TestCase):
         self.assertTrue(password_validation_error not in response.json()['Errors'])
 
     def test_invalid_email(self):
-        """Tests trying to create a user with an invalid email fails with the correctly"""
+        """Tests trying to create a user with an invalid email fails correctly"""
         payload = {'email': 123}
         url = 'https://localhost:{}/signup'.format(TestAPI.server.port)
         # ensure our self-signed certificate is trusted
