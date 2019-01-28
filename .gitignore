@@ -1,4 +1,4 @@
 *.pyc
 *.pyo
-__pycache__
-.idea
+__pycache__/
+.idea/
