@@ -27,7 +27,6 @@ python3 client.py login
 ## Running the tests
 
 I've included some rudimentary unit tests.
-These could definitely be extended in the future.
 
 ```
 python3 test.py

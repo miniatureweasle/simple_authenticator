@@ -1,3 +1,7 @@
+"""
+Defines standalone functions used within the app.
+"""
+
 import binascii
 import hashlib
 import secrets
@@ -36,8 +40,7 @@ def send_verification_email(recipient: str, message: str) -> bool:
 
 def hash_password(password: str) -> tuple:
     """
-    Hash a password for storing.
-    `pbkdf2_hmac` fits our purposes well.
+    Hash a password for storing. `pbkdf2_hmac` fits our purposes well.
     It's powerful and available in python3's standard library.
     https://en.wikipedia.org/wiki/PBKDF2
     """

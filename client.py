@@ -1,3 +1,7 @@
+"""
+A dead simple client to interact with the authentication server
+"""
+
 import argparse
 
 import requests
@@ -23,7 +27,7 @@ def signup(user_email, user_password, server_port):
     response_content = str(response.content)
     print(response_content)
     if 'Success' in response_content:
-        print("Don't shutdown server until email verification link is clicked!")
+        print("Don't shutdown until the email verification link has been clicked!")
         print('Shutdown with CTRL-C')
         tools.wait_for_sigint()
 
@@ -37,6 +41,7 @@ def verify(email_verification_token, server_port):
 
 
 def prompt_cred() -> tuple:
+    """Get the email and password from the user"""
     user_email = input('Enter email:\n')
     user_password = input('Enter password:\n')
     return user_email, user_password
@@ -66,5 +71,3 @@ if __name__ == '__main__':
         print('Verify Selected')
         token = input('Enter token\n')
         verify(token, server.port)
-    else:
-        print('Invalid argument. enter "signup" or "login"')
