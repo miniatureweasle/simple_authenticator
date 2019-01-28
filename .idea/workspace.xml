@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82e0b2bb-82ff-4b70-8516-5e0320120e36" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db_ops.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/db_ops.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/runserver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,17 +72,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="46" />
+          <entry key="gitignore" value="5" />
           <entry key="md" value="564" />
           <entry key="notes" value="182" />
-          <entry key="py" value="18676" />
+          <entry key="py" value="18679" />
           <entry key="sh" value="96" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="564" />
-          <entry key="PLAIN_TEXT" value="324" />
-          <entry key="Python" value="18676" />
+          <entry key="PLAIN_TEXT" value="329" />
+          <entry key="Python" value="18679" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -94,7 +91,7 @@
           <entry key="Pipfile" value="1" />
           <entry key="crt" value="2" />
           <entry key="db" value="5" />
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="2" />
           <entry key="key" value="2" />
           <entry key="md" value="2" />
           <entry key="notes" value="6" />
@@ -107,7 +104,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="2" />
-          <entry key="PLAIN_TEXT" value="20" />
+          <entry key="PLAIN_TEXT" value="21" />
           <entry key="Python" value="57" />
           <entry key="PythonStub" value="3" />
         </counts>
@@ -122,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/db_ops.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="-1384">
+              <caret line="35" column="47" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -148,8 +145,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="53" column="79" selection-start-line="53" selection-start-column="79" selection-end-line="53" selection-end-column="79" />
+            <state relative-caret-position="207">
+              <caret line="53" column="99" selection-start-line="53" selection-start-column="99" selection-end-line="53" selection-end-column="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -181,23 +187,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+            <state relative-caret-position="1634">
+              <caret line="86" column="59" selection-start-line="86" selection-start-column="59" selection-end-line="86" selection-end-column="59" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-1247971763/builtins.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="2787" column="6" selection-start-line="2787" selection-start-column="6" selection-end-line="2787" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -271,16 +268,16 @@
         <option value="$PROJECT_DIR$/database/__init__.py" />
         <option value="$PROJECT_DIR$/const.py" />
         <option value="$PROJECT_DIR$/const.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/client.py" />
         <option value="$PROJECT_DIR$/tools.py" />
         <option value="$PROJECT_DIR$/tests.py" />
         <option value="$PROJECT_DIR$/runserver.py" />
         <option value="$PROJECT_DIR$/runserver.py" />
-        <option value="$PROJECT_DIR$/core.py" />
-        <option value="$PROJECT_DIR$/database/db_ops.py" />
         <option value="$PROJECT_DIR$/views.py" />
+        <option value="$PROJECT_DIR$/database/db_ops.py" />
+        <option value="$PROJECT_DIR$/core.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -360,7 +357,7 @@
     <frame x="2" y="2" width="1366" height="736" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49835527" visible="true" weight="0.18884759" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49835527" visible="true" weight="0.18884759" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50164473" side_tool="true" weight="0.15315986" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -371,7 +368,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.34596375" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.34596375" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32894737" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32894737" />
       <window_info anchor="bottom" id="Tail" order="11" />
@@ -552,13 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="817">
@@ -600,10 +590,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests.py">
+    <entry file="file://$PROJECT_DIR$/const.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="113">
+          <caret line="37" column="24" selection-start-line="37" selection-end-line="37" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1634">
+          <caret line="86" column="59" selection-start-line="86" selection-start-column="59" selection-end-line="86" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -614,37 +617,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/const.py">
+    <entry file="file://$PROJECT_DIR$/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="37" column="24" selection-start-line="37" selection-end-line="37" selection-end-column="24" />
+        <state relative-caret-position="188">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/db_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1384">
+          <caret line="35" column="47" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="53" column="79" selection-start-line="53" selection-start-column="79" selection-end-line="53" selection-end-column="79" />
+        <state relative-caret-position="207">
+          <caret line="53" column="99" selection-start-line="53" selection-start-column="99" selection-end-line="53" selection-end-column="99" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/db_ops.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="38">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>
