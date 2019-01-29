@@ -11,7 +11,7 @@ import tools
 from runserver import SimpleHTTPSServer
 
 
-def login(user_email, user_password, server_port):
+def login(user_email: str, user_password: str, server_port: int) -> None:
     """Logs in a user"""
     payload = {'email': user_email, 'password': user_password}
     url = 'https://localhost:{}/login'.format(server_port)
@@ -19,7 +19,7 @@ def login(user_email, user_password, server_port):
     print(str(response.content))
 
 
-def signup(user_email, user_password, server_port):
+def signup(user_email: str, user_password: str, server_port: int) -> None:
     """Signs up a user"""
     payload = {'email': user_email, 'password': user_password}
     url = 'https://localhost:{}/signup'.format(server_port)
@@ -32,8 +32,8 @@ def signup(user_email, user_password, server_port):
         tools.wait_for_sigint()
 
 
-def verify(email_verification_token, server_port):
-    """Verifies a user"""
+def verify(email_verification_token: str, server_port: int) -> None:
+    """In case the email verification link does not work, use this"""
     url = 'https://localhost:{}/verify?token={}'.format(server_port, email_verification_token)
     # ensure our self-signed certificate is trusted
     response = requests.get(url, verify='./ssl/self-signed.crt')
